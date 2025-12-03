@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #1e1e2f;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4db8ff;
+      margin: 20px 0;
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      color: #ffd700;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 5px;
+      margin: 15px 0;
+      font-size: 20px;
+    }
+
+    /* Flexbox container */
+    .container {
+      display: flex;
+      max-width: 1100px;
+      margin: auto;
+      background: #2c2c3c;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      flex-wrap: wrap;
+    }
+
+    /* Left column */
+    .left-column {
+      flex: 1;
+      background: #252538;
+      padding: 25px 20px;
+      text-align: center;
+      min-width: 280px;
+    }
+
+    /* Right column */
+    .right-column {
+      flex: 2;
+      padding: 25px 20px;
+      min-width: 300px;
+    }
+
+    /* Profile image */
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #4db8ff;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    .contact p {
+      margin: 8px 0;
+      color: #ccc;
+      font-size: 14px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      transition: transform 0.2s, color 0.2s;
+    }
+    .contact i {
+      margin-right: 10px;
+      color: #4db8ff;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .contact p:hover i {
+      color: #ffd700;
+      transform: scale(1.2);
+    }
+
+    /* Skills */
+    .skill {
+      margin: 12px 0;
+      text-align: left;
+    }
+    .skill-name {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .progress-bar {
+      background: #444;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 8px;
+    }
+    .progress {
+      background: #4db8ff;
+      height: 8px;
+      width: 0;
+      transition: width 0.6s ease-in-out;
+    }
+    .skill:hover .progress {
+      width: var(--level);
+      background: #00e6e6;
+    }
+
+    /* Lists */
+    ul {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+    li {
+      margin: 6px 0;
+      font-size: 14px;
+      transition: transform 0.2s, color 0.2s;
+    }
+    li:hover {
+      color: #4db8ff;
+      transform: translateX(5px);
+    }
+
+    /* Download button */
+    .download-btn {
+      display: block;
+      width: 220px;
+      margin: 20px auto 40px;
+      padding: 10px;
+      text-align: center;
+      background: #4db8ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .download-btn:hover {
+      background: #3399ff;
+      transform: scale(1.05);
+    }
+
+    /* Responsive flex for smaller screens */
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .left-column, .right-column {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Resume</h1>
+
+  <div class="container">
+    <!-- Left Column -->
+    <div class="left-column">
+      <img src="/siddss (1)qqq.jpg" alt="Profile Pic" class="profile-pic">
+<p class="title">Siddharth C Durai<br>B.Tech-CSE <br> USN ENG24CS0233</p>
+
+      <h2>Contact</h2>
+      <div class="contact">
+        <p><i class="fas fa-envelope"></i> siddharthcdurai@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +91-8217474600</p>
+        <p><i class="fab fa-linkedin"></i> linkedin.com/in/mr-siddharth-c-durai</p>
+        <p><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
+      </div>
+
+      <h2>Skills</h2>
+      <div class="skill" style="--level: 85%;">
+        <div class="skill-name">C / C++</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" style="--level: 80%;">
+        <div class="skill-name">Python</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" style="--level: 75%;">
+        <div class="skill-name">Java</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" style="--level: 70%;">
+        <div class="skill-name">HTML / CSS</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech in Computer Science</strong>, Dayananda Sagar University (2024–2028)</li>
+        <li><strong>PUC</strong>, AMC PU College (2022–2024)</li>
+        <li><strong>10th</strong>, Ryan International School (2021–2022)</li>
+      </ul>
+
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>AI ChatBot Project (Python/NLP)</strong>  
+          <br><small>Implemented conversational AI using Python and NLP libraries.</small>
+        </li>
+        <li><strong>Open Source Contributor</strong>  
+          <br><small>Contributed bug fixes and improved documentation for GitHub repositories.</small>
+        </li>
+      </ul>
+
+      <h2>Research / Projects</h2>
+      <ul>
+        <li><strong>Data Analysis Project (Python & Pandas)</strong>  
+          <br><small>Analyzed large datasets from Kaggle and visualized insights using Matplotlib.</small>
+        </li>
+        <li><strong>Algorithm Optimization Study (C/C++)</strong>  
+          <br><small>Implemented sorting/searching algorithms and compared performance metrics.</small>
+        </li>
+        <li><strong>IoT Smart Home Mini Project</strong>  
+          <br><small>Developed automated lighting and sensor monitoring using Arduino/Raspberry Pi.</small>
+        </li>
+      </ul>
+
+      <h2>Achievements</h2>
+      <ul>
+        <li>Coding Hackathon, DSU (2024)</li>
+        <li>Certificate in C Programming - HackerRank</li>
+        <li>Certificate in Python - Udemy</li>
+      </ul>
+    </div>
+  </div>
+
+  <a href="javascript:window.print()" class="download-btn">Download as PDF</a>
+
+</body>
+</html>
